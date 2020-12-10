@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
-import 'constain/mau.dart';
+import 'package:hello/car.dart';
+
+List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+List<String> numberString = numbers.map((e) {
+  return e.toString() + "1";
+}).toList();
 
 main() {
-  runApp(MyApp());
-}
+  var myCar = new Car(name: "dee", year: 123);
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-    );
-  }
-}
+  myCar.handleEvent = () {
+    print('Handle in main');
+  };
 
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Chưởng mặt lồn",
-          style: TextStyle(color: red),
-        ),
-        leading: Icon(Icons.cancel),
-        actions: [InkWell(onTap: () {}, child: Text("haha"))],
-      ),
-    );
-  }
+  myCar.doSomeThing();
+
+  runApp(Center(
+    child: Text(
+      '${myCar.toString()}',
+      style: TextStyle(fontSize: 30),
+      textDirection: TextDirection.ltr,
+    ),
+  ));
 }

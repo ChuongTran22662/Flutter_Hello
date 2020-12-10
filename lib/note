@@ -1,0 +1,15 @@
+Style
+Center() : các thẻ con bên trong được căn ra giữa
+
+Dart
+	Array: List<>, HashMap, Collection
+	print: In ra man hinh
+	map : ánh xạ mảng về mảng mới ( toList())
+	loop: forEach, for
+	Function handleEvent
+	where === filter
+	
+	DataType:Final, const, int, String ...
+	
+	Map<String, dynamic> x = Map();
+	x['name'] = 123;
